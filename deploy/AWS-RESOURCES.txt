@@ -1,0 +1,4 @@
+AWS_REGION=us-east-1
+AWS_AVAILABILITY_ZONE=us-east-1a
+LIGHTSAIL_STATIC_IP=100.51.136.9
+AWS_S3_BUCKET=distritomiami-images-prod

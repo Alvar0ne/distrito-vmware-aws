@@ -1,0 +1,11 @@
+[
+  {
+    "id": "promo-demo-10",
+    "code": "MIAMI10",
+    "description": "Codigo de muestra para clientes frecuentes",
+    "type": "percent",
+    "value": 10,
+    "active": true,
+    "createdAt": "2026-06-22T12:00:00.000Z"
+  }
+]

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" role="img" aria-label="Tommy Hilfiger">
+  <text x="0" y="40" font-family="Arial, sans-serif" font-size="27" font-weight="700">TOMMY</text>
+  <rect x="112" y="17" width="54" height="30" fill="#fff" stroke="#111" stroke-width="2"/>
+  <path d="M112 17h27v30h-27z" fill="#071d49"/><path d="M139 17h27v30h-27z" fill="#d71920"/>
+  <text x="177" y="40" font-family="Arial, sans-serif" font-size="27" font-weight="700">HILFIGER</text>
+</svg>

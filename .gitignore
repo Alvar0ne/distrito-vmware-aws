@@ -1,0 +1,11 @@
+.env
+.env.local
+.env.*.local
+.next/
+node_modules/
+*.log
+data/customers.local.json
+data/orders.local.json
+deploy/.env.server
+deploy/backups/
+deploy/artifacts/

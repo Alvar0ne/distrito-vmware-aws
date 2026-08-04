@@ -1,0 +1,57 @@
+{
+  "generatedAt": "2026-06-15T17:57:13",
+  "source": "C:\\Users\\LENOVO\\Desktop\\Proyecto Migracion WEB Distrito Miami\\distrito-miami_productos_2026-06-15.csv",
+  "rows": 187,
+  "products": 96,
+  "available": 96,
+  "featured": 42,
+  "brands": 16,
+  "categories": [
+    {
+      "category": "poleras",
+      "count": 45
+    },
+    {
+      "category": "polerones",
+      "count": 30
+    },
+    {
+      "category": "accesorios",
+      "count": 12
+    },
+    {
+      "category": "conjuntos",
+      "count": 7
+    },
+    {
+      "category": "chaquetas",
+      "count": 2
+    }
+  ],
+  "sizes": [
+    {
+      "size": "L",
+      "productCount": 28
+    },
+    {
+      "size": "S",
+      "productCount": 22
+    },
+    {
+      "size": "M",
+      "productCount": 21
+    },
+    {
+      "size": "XL",
+      "productCount": 12
+    },
+    {
+      "size": "XS",
+      "productCount": 12
+    },
+    {
+      "size": "U",
+      "productCount": 11
+    }
+  ]
+}

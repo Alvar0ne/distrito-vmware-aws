@@ -1,0 +1,8 @@
+.env
+.env.local
+.env.*.local
+.git
+.next
+node_modules
+*.log
+data/*.before-*.json
