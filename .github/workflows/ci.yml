@@ -13,8 +13,16 @@ jobs:
       - name: Obtener codigo del repositorio
         uses: actions/checkout@v4
 
-      - name: Verificar Node.js
-        run: node --version
+      - name: Preparar Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Verificar versiones
+        run: |
+          node --version
+          npm --version
 
       - name: Instalar dependencias
         run: npm ci
