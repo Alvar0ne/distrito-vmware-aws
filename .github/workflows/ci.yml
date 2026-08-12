@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -6,7 +6,9 @@ on:
       - main
 
 jobs:
+
   build-test:
+    name: CI - Build and Validate
     runs-on: self-hosted
 
     steps:
@@ -29,3 +31,36 @@ jobs:
 
       - name: Compilar aplicacion
         run: npm run build
+
+
+  deploy:
+    name: CD - Deploy to DM-API-01
+    runs-on: self-hosted
+    needs: build-test
+
+    steps:
+
+      - name: Desplegar aplicacion
+        run: |
+          ssh alvaro@192.168.2.20 '
+            set -e
+
+            cd ~/distrito-vmware-aws
+
+            echo "Actualizando codigo..."
+            git pull origin main
+
+            echo "Construyendo imagen Docker..."
+            docker build -t distrito-miami:latest .
+
+            echo "Actualizando contenedor..."
+            docker compose up -d --force-recreate
+
+            echo "Estado de contenedores:"
+            docker compose ps
+          '
+
+      - name: Health Check
+        run: |
+          sleep 5
+          curl --fail --retry 5 --retry-delay 3 http://192.168.2.20:3000
