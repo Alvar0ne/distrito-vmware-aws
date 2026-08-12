@@ -1,0 +1,21 @@
+name: CI Test
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-runner:
+    runs-on: self-hosted
+
+    steps:
+      - name: Probar conexion con runner
+        run: |
+          echo "GitHub Actions conectado correctamente"
+          echo "Servidor:"
+          hostname
+          echo "Usuario:"
+          whoami
+          echo "Directorio:"
+          pwd
