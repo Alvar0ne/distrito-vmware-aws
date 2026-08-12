@@ -1,4 +1,4 @@
-name: CI Test
+name: CI
 
 on:
   push:
@@ -6,16 +6,18 @@ on:
       - main
 
 jobs:
-  test-runner:
+  build-test:
     runs-on: self-hosted
 
     steps:
-      - name: Probar conexion con runner
-        run: |
-          echo "GitHub Actions conectado correctamente"
-          echo "Servidor:"
-          hostname
-          echo "Usuario:"
-          whoami
-          echo "Directorio:"
-          pwd
+      - name: Obtener codigo del repositorio
+        uses: actions/checkout@v4
+
+      - name: Verificar Node.js
+        run: node --version
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Compilar aplicacion
+        run: npm run build
